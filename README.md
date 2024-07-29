@@ -16,7 +16,7 @@ For training a model, first we select the batch size of 16 because that’s the 
  To introduce meaningful architectural changes into our model for NLI task, I consider several approaches, such as integrating a pretrained sentence embedding to enhance our input representation which was imported from sentence_tranformer library. Also I add an attention Mechanisms into our model by adding an attention layer to focus on important parts of the input. So basically the model processes the input tokens (input_ids) and their attention masks (attention_mask).It extracts the [CLS] token representation from DistilBERT, which is typically used for classification tasks. Sentence embeddings are generated using the SentenceTransformer model. The projected output from are passed through a multi-head attention layer. The attention mechanism helps the model focus on different parts of the sentence embeddings, potentially capturing more useful information. The outputs from the attention layer and the projected DistilBERT output are concatenated. The combined output (768 dimensions) is passed through the final classifier layer to produce logits for classification.
 
 <div>
-<img src=" https://github.com/shahkarKhan24/Natural-Language-Inference-NLI/blob/main/Images/output.png" width="400" alt="Dataset"/>
+<img src="https://github.com/shahkarKhan24/Natural-Language-Inference-NLI/blob/main/Images/output.png" width="400" alt="architecturL"/>
 </div>
 
 <h3>Generating Adversarial Dataset:</h3>
